@@ -1,3 +1,66 @@
-body {
-	
+
+/* I plan to go more in depth with my body text styling this weekend!*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Asimovian&family=Asta+Sans:wght@300..800&display=swap');
+
+html {
+	background-color: black;
+}
+
+h2 {
+	color: white;
+	font-family: "Amiro", sans-serif;
+	font-size: 3.2em;
+	text-transform: lowercase;
+	font-style: italic;
+}
+
+h1 {
+	text-transform: uppercase;
+	color: #BA4F9D;
+	font-size: 15em;
+	font-family: "Asimovian";
+}
+
+h3 {
+	text-transform: lowercase;
+	color: white;
+	font-size: 3.2em;
+	font-family: "Amiro", sans-serif;
+	font-style: italic;
+}
+
+h4 {
+	font-family: "Asta Sans", sans-serif;
+	color: #DB96C8;
+	font-size: 1.3em;
+}
+
+time {
+	font-family: "Asta Sans", sans-serif;
+	color: #DB96C8;
+	font-size: 1em;
+	font-style: italic;
+	 display: inline-block; /* wasnt behaving correctly*/
+	margin-bottom: 90px;
+}
+
+p {
+	margin-bottom: 20px;
+	width: 80em;
+	line-height: 1.6;
+}
+
+article {
+	font-family: "Asta Sans", sans-serif;
+	color: white;
+}
+
+#response {
+	font-family: "Asta Sans", sans-serif;
+	color: #D4D87E;
+}
+
+section::after{
+	content: '•••';
 }
