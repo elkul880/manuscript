@@ -47,8 +47,9 @@ time {
 
 p {
 	margin-bottom: 20px;
-	width: 80em;
+	width: 65em;
 	line-height: 1.6;
+	font-size: 1.1em;
 }
 
 article {
@@ -63,4 +64,10 @@ article {
 
 section::after{
 	content: '•••';
+}
+
+.highlight {
+	font-size: 2em;
+	width: 35em;
+	color: #D4D87E;
 }
