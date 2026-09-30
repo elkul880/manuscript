@@ -1,73 +1,86 @@
 
-/* I plan to go more in depth with my body text styling this weekend!*/
-
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Asimovian&family=Asta+Sans:wght@300..800&display=swap');
-
-html {
+:root {
 	background-color: black;
+	--font-primary: "Asta Sans", sans-serif;
+	--font-header: "Amiro", sans-serif;
+	--color-yellow: #D4D87E;
+	--color-pink1: #BA4F9D;
+	--color-pink2: #DB96C8;
+	--color-white: white;
+	font-size: 16px;
+
 }
 
-h2 {
-	color: white;
-	font-family: "Amiro", sans-serif;
-	font-size: 3.2em;
+h1 {
+	color: var(--color-white);
+	font-family: var(--font-header);
+	font-size: 3.2rem;
 	text-transform: lowercase;
 	font-style: italic;
 }
 
-h1 {
+h2 {
 	text-transform: uppercase;
-	color: #BA4F9D;
-	font-size: 15em;
+	color: var(--color-pink1);
+	font-size: 15rem;
 	font-family: "Asimovian";
 }
 
 h3 {
 	text-transform: lowercase;
-	color: white;
-	font-size: 3.2em;
-	font-family: "Amiro", sans-serif;
+	color: var(--color-white);
+	font-size: 3.2rem;
+	font-family: var(--font-header);
 	font-style: italic;
 }
 
 h4 {
-	font-family: "Asta Sans", sans-serif;
-	color: #DB96C8;
-	font-size: 1.3em;
+	font-family: var(--font-primary);
+	color: var(--color-pink2);
+	font-size: 1.3rem;
 }
 
 time {
-	font-family: "Asta Sans", sans-serif;
-	color: #DB96C8;
+	font-family: var(--font-primary);
+	color: var(--color-pink2);
 	font-size: 1em;
 	font-style: italic;
-	 display: inline-block; /* wasnt behaving correctly*/
-	margin-bottom: 90px;
+	display: block; /* wasnt behaving correctly*/
+	margin-inline-end: 90px;
 }
 
 p {
-	margin-bottom: 20px;
-	width: 65em;
+	font-family: var(--font-primary);
+	margin-inline-end: 20px;
+	max-inline-size: 65rem;
+	/* max-inline-size */
 	line-height: 1.6;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 }
 
 article {
-	font-family: "Asta Sans", sans-serif;
-	color: white;
-}
-
-#response {
-	font-family: "Asta Sans", sans-serif;
-	color: #D4D87E;
+	color: var(--color-white);
 }
 
 section::after{
 	content: '•••';
 }
 
+.response {
+	color: var(--color-yellow);
+	margin:1.5rem;
+	float: inline-end;
+	border-style: double;
+	border-width: 0.5rem;
+	border-top-color: var(--color-pink2);
+	border-bottom-color: var(--color-pink1);
+	padding: 1rem;
+	max-inline-size: 40rem;
+}
+
+
 .highlight {
-	font-size: 2em;
-	width: 35em;
-	color: #D4D87E;
+	font-size: 2rem;
+	/* max-inline-size */
+	color: var(--color-pink2);
 }
