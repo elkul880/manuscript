@@ -7,8 +7,10 @@
 	--color-pink1: #BA4F9D;
 	--color-pink2: #DB96C8;
 	--color-white: white;
+	--sizing-primary: 2rem;
 	font-size: 16px;
-
+	margin-inline-start: 5em;
+	margin-inline-end: 5em;
 }
 
 h1 {
@@ -17,6 +19,8 @@ h1 {
 	font-size: 3.2rem;
 	text-transform: lowercase;
 	font-style: italic;
+	margin-block-start: var(--sizing-primary);
+
 }
 
 h2 {
@@ -38,23 +42,24 @@ h4 {
 	font-family: var(--font-primary);
 	color: var(--color-pink2);
 	font-size: 1.3rem;
+	margin-block-start: var(--sizing-primary);
 }
 
 time {
 	font-family: var(--font-primary);
 	color: var(--color-pink2);
-	font-size: 1em;
+	font-size: 1rem;
 	font-style: italic;
 	display: block; /* wasnt behaving correctly*/
-	margin-inline-end: 90px;
 }
 
 p {
 	font-family: var(--font-primary);
+	margin-block-start: var(--sizing-primary);
+	margin-block-end: var(--sizing-primary); /* space between p */
 	margin-inline-end: 20px;
-	max-inline-size: 65rem;
-	/* max-inline-size */
-	line-height: 1.6;
+	max-inline-size: 70rem; /* width  */
+	line-height: var(--sizing-primary);;
 	font-size: 1.1rem;
 }
 
@@ -62,25 +67,54 @@ article {
 	color: var(--color-white);
 }
 
-section::after{
-	content: '•••';
+section::after {
+    content: '•••';
+    display: block;
+
+    color: var(--color-pink2);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem; /* to seperate the dots, found by AI */
+
+
+    border-block: double 0.3rem var(--color-pink1);
+	/* only controls top and bottom border, found by AI  */
+
+    padding-block: 0.5rem;
+    margin-block: 3rem;
+    text-align: center;
+	border-width: 0.5rem;
 }
+
+/* section::after{
+
+	border-style: double;
+	border-width: 3rem;
+	border-top-color: var(--color-pink2);
+	border-bottom-color: var(--color-pink1);
+	padding:  var(--sizing-primary);
+	max-inline-size: 40rem;
+
+} */
 
 .response {
 	color: var(--color-yellow);
-	margin:1.5rem;
+	margin:var(--sizing-primary);
 	float: inline-end;
 	border-style: double;
 	border-width: 0.5rem;
 	border-top-color: var(--color-pink2);
 	border-bottom-color: var(--color-pink1);
-	padding: 1rem;
+	padding:  var(--sizing-primary);
 	max-inline-size: 40rem;
+}
+
+section:nth-child(2) aside {
+	float: inline-start;
 }
 
 
 .highlight {
-	font-size: 2rem;
+	font-size: var(--sizing-primary);
 	/* max-inline-size */
 	color: var(--color-pink2);
 }
