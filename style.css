@@ -6,43 +6,99 @@
 	--color-yellow: #D4D87E;
 	--color-pink1: #BA4F9D;
 	--color-pink2: #DB96C8;
-	--color-white: white;
+	--color-white: rgb(242, 242, 216);
 	--sizing-primary: 2rem;
 	font-size: 16px;
 	margin-inline-start: 5em;
 	margin-inline-end: 5em;
 }
 
+a {
+	font-family: "Asimovian";
+	color: black;
+	background-color: var(--color-yellow);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+a:hover {
+    background-color: var(--color-pink1);
+    color: var(--color-yellow);
+}
+
 h1 {
-	color: var(--color-white);
+	color: var(--color-yellow);
 	font-family: var(--font-header);
-	font-size: 3.2rem;
+	font-size: 3rem;
 	text-transform: lowercase;
 	font-style: italic;
 	margin-block-start: var(--sizing-primary);
-
 }
 
 h2 {
-	text-transform: uppercase;
+	text-transform:uppercase;
 	color: var(--color-pink1);
-	font-size: 15rem;
+	font-size: 17rem;
 	font-family: "Asimovian";
 }
 
 h3 {
 	text-transform: lowercase;
-	color: var(--color-white);
+	color: var(--color-yellow);
 	font-size: 3.2rem;
 	font-family: var(--font-header);
 	font-style: italic;
+	max-inline-size:40rem;/* makes the paragraph two lines */
+    text-align: right;
 }
 
 h4 {
 	font-family: var(--font-primary);
 	color: var(--color-pink2);
-	font-size: 1.3rem;
+	font-size: 2rem;
+	max-inline-size:30rem;/* makes the paragraph two lines */
 	margin-block-start: var(--sizing-primary);
+}
+
+
+.h1-button h1 {
+    float: left;
+    margin-block-start: var(--sizing-primary);
+}
+
+.h1-button ol {
+    float: right;
+    margin-block-start: var(--sizing-primary);
+    padding: 0;
+    list-style: none;
+}
+
+.h1-button li {
+    display: inline-block;
+    margin-inline-start: 0.5rem;
+}
+
+.h1-button a {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.h3-button {
+    text-align: right;
+}
+
+.h3-button h3 {
+    text-align: right;
+    display: inline-block;
+}
+
+.h3-button a {
+    float: left;
 }
 
 time {
@@ -50,7 +106,9 @@ time {
 	color: var(--color-pink2);
 	font-size: 1rem;
 	font-style: italic;
-	display: block; /* wasnt behaving correctly*/
+	margin-block-start: var(--sizing-primary);
+	display:block;/* for the inline element to act as a block */
+
 }
 
 p {
@@ -59,7 +117,7 @@ p {
 	margin-block-end: var(--sizing-primary); /* space between p */
 	margin-inline-end: 20px;
 	max-inline-size: 70rem; /* width  */
-	line-height: var(--sizing-primary);;
+	line-height: var(--sizing-primary);
 	font-size: 1.1rem;
 }
 
@@ -75,7 +133,6 @@ section::after {
     font-size: 1.5rem;
     letter-spacing: 0.5rem; /* to seperate the dots, found by AI */
 
-
     border-block: double 0.3rem var(--color-pink1);
 	/* only controls top and bottom border, found by AI  */
 
@@ -84,17 +141,6 @@ section::after {
     text-align: center;
 	border-width: 0.5rem;
 }
-
-/* section::after{
-
-	border-style: double;
-	border-width: 3rem;
-	border-top-color: var(--color-pink2);
-	border-bottom-color: var(--color-pink1);
-	padding:  var(--sizing-primary);
-	max-inline-size: 40rem;
-
-} */
 
 .response {
 	color: var(--color-yellow);
@@ -110,11 +156,20 @@ section::after {
 
 section:nth-child(2) aside {
 	float: inline-start;
+	/* aligns it to the left  */
 }
 
 
 .highlight {
 	font-size: var(--sizing-primary);
-	/* max-inline-size */
 	color: var(--color-pink2);
+}
+
+
+footer {
+	color: var(--color-yellow);
+}
+
+section:last-child::after {
+    display: none;
 }
